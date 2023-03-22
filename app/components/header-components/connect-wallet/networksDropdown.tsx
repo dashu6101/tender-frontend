@@ -146,7 +146,7 @@ const NetworksDropdown = () => {
         ) : (
           <div className="show animate w-[34px] h-[34px] xl:w-[115px] xl:h-[44px] mr-[6px] xl:mr-[12px]"></div>
         )
-      ) : (
+      ) : selectedNetwork.networkName && isActive ? (
         <div
           className="relative z-10 w-[34px] h-[34px] xl:h-[44px] xl:w-[auto] m-auto mr-[6px] xl:mr-[12px]"
           ref={dropdownRef}
@@ -271,7 +271,7 @@ const NetworksDropdown = () => {
             </div>
           </div>
         </div>
-      )}
+      ) : ("")}
     </div>
   );
 };
